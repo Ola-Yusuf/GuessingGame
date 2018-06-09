@@ -1,0 +1,20 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Guessing Game</string>
+    <string name="info">Instruction:"\n"You are to guess the number in the Box below.
+        "\n"It is between (
+        <xliff:g id="min" example="10">%d</xliff:g> and
+        <xliff:g id="max" example="10">%d</xliff:g>
+        )"\n"You WIN if your answer is correct.
+    </string>
+    <string name="tryRemain">Available Try:
+        <xliff:g id="numOfTry" example="10">%d</xliff:g></string>
+    <string name="values">0123456789</string>
+    <string name="box">BOX</string>
+    <string name="submit">Submit</string>
+    <string name="tryAgain">Try Again</string>
+    <string name="entryHint">Enter Your Guess</string>
+    <integer name="maximumNumber">100</integer>
+    <integer name="minimumNumber">1</integer>
+    <integer name="totalAvailableTry">5</integer>
+
+</resources>
