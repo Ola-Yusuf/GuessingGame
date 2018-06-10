@@ -68,7 +68,7 @@ public void updateAvailableTry(int x){
 
     /**
      * compare userInput with generatedNumber.
-     * @return
+     * @return true if input is accurate
      */
     public boolean compareData(){
        return userInput==generatedNumber;
@@ -90,10 +90,11 @@ public void updateAvailableTry(int x){
                 }
             }
         }else {
-            Toast.makeText(this, "Supply Valid Input, Numbers only!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.unsupportedInputHint),Toast.LENGTH_SHORT).show();
         }
     }
 
+    @SuppressLint("StringFormatInvalid")
     public String processGuess(){
         info  = (TextView) findViewById(R.id.info);
         inputHint  = (TextView) findViewById(R.id.inputHint);
@@ -106,27 +107,27 @@ public void updateAvailableTry(int x){
             //open the box and say you win.
             input.setVisibility(View.GONE);
             submitButton.setText(getString(R.string.tryAgain));
-            info.setText(" Congratulation, You WIN!!! ");
-            box.setText(generatedNumber+"");
-            inputHint.setText(" Accurate ");
+            info.setText(getString(R.string.congrat));
+            box.setText(getString(R.string.generatedNumber,generatedNumber));
+            inputHint.setText(getString(R.string.inputRangeAccurate));
             tryAgain = true;
 
         }else{
-            Toast.makeText(this, "You are Wrong",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.wrongInput),Toast.LENGTH_SHORT).show();
 
             if(numberOfTry==0){ //for only on last attempt
                 input.setVisibility(View.GONE);
                 submitButton.setText(getString(R.string.tryAgain));
-                info.setText(" Too Painful, You LOOS! ");
-                box.setText(generatedNumber+"");
-                inputHint.setText(" You are Wrong ");
+                info.setText(getString(R.string.loos));
+                box.setText(getString(R.string.generatedNumber,generatedNumber));
+                inputHint.setText(getString(R.string.wrongInput));
                 tryAgain = true;
             }else{
                 // tell user input too high
                 if(userInput<generatedNumber){
-                    inputHint.setText(" Input too Low ");
+                    inputHint.setText(getString(R.string.inputRangeLow));
                 }else{
-                    inputHint.setText(" Input too High ");
+                    inputHint.setText(getString(R.string.inputRangeHigh));
                 }
 
             }

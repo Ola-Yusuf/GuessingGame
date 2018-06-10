@@ -8,11 +8,19 @@
     </string>
     <string name="tryRemain">Available Try:
         <xliff:g id="numOfTry" example="10">%d</xliff:g></string>
+    <string name="generatedNumber"> <xliff:g id="randomNum" example="10">%d</xliff:g> </string>
     <string name="values">0123456789</string>
     <string name="box">BOX</string>
     <string name="submit">Submit</string>
     <string name="tryAgain">Try Again</string>
     <string name="entryHint">Enter Your Guess</string>
+    <string name="congrat">Congratulation, You WIN !!! </string>
+    <string name="loos">Too Painful, You LOOS!</string>
+    <string name="unsupportedInputHint">Supply Valid Input, Numbers only!</string>
+    <string name="inputRangeAccurate">Accurate</string>
+    <string name="inputRangeLow">Input too Low</string>
+    <string name="inputRangeHigh">Input too High</string>
+    <string name="wrongInput">You are Wrong</string>
     <integer name="maximumNumber">100</integer>
     <integer name="minimumNumber">1</integer>
     <integer name="totalAvailableTry">5</integer>
